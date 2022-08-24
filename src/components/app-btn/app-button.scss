@@ -1,0 +1,8 @@
+@import '../../mixins/mixins.scss';
+
+.btn {
+    @include BTN (#ffffff, 600, #59abb0, none, 10px, flex, row, center, center);
+    &:hover {
+      background-color: #60dfe8;
+    }
+  }

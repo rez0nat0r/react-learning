@@ -1,0 +1,41 @@
+@import '../../mixins/mixins.scss';
+
+.header {
+  padding-top: 62px;
+  margin-bottom: 54px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__button {
+    width: 150px;
+    height: 40px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    list-style-type: none;
+    align-items: baseline;
+  }
+  &__item {
+    display: flex;
+    margin-right: 24px;
+  }
+  &__link {
+    &-first {
+      width: 86px;
+    }
+    &-second {
+      width: 95px;
+    }
+    &-third {
+      width: 70px;
+    }
+    &-fourth {
+      width: 102px;
+    }
+  }
+}
