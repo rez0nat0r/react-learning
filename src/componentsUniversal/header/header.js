@@ -1,6 +1,6 @@
-import './app-header.scss'
-import logo from '../../images/logo-SA.png'
-import Button from '../app-btn/app-button';
+import './header.scss'
+import logo from '../../assets/images/logo.png'
+import Button from '../button/button';
 
 const Header = () => {
     return (

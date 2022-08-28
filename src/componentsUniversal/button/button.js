@@ -1,4 +1,4 @@
-import './app-button.scss'
+import './button.scss'
 
 const Button = ({text, className=''}) => {
     return (

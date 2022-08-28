@@ -1,6 +1,6 @@
-import "./app-subscribe.scss";
-import letter from "../../../images/old-letter 1-SA.jpg";
-import Button from '../../app-btn/app-button';
+import "./home-subscribe.scss";
+import inkstand from "../../../../assets/images/inkstand.png";
+import Button from '../../../../componentsUniversal/button/button';
 
 const Subscribe = () => {
   return (
@@ -10,7 +10,7 @@ const Subscribe = () => {
           <div className="wrapper">
             <img
               className="subscribe__img"
-              src={letter}
+              src={inkstand}
               alt="old-letter-img"
             />
           </div>
