@@ -18,6 +18,10 @@
 }
 
 .menu {
+  &__link:hover {
+    color: $main-color;
+    font-family: 'Baloo2-SemiBold', sans-serif;
+  }
   &__list {
     display: flex;
     list-style-type: none;
