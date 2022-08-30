@@ -1,15 +1,18 @@
 @import '../../stylesUniversal/mixins/mixins.scss';
 
 .header {
+  font-family: 'Baloo2-Regular', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
   padding-top: 62px;
-  margin-bottom: 54px;
+  margin-bottom: 47px;
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   &__button {
-    width: 150px;
+    width: 152px;
     height: 40px;
   }
 }
@@ -22,20 +25,6 @@
   }
   &__item {
     display: flex;
-    margin-right: 24px;
-  }
-  &__link {
-    &-first {
-      width: 86px;
-    }
-    &-second {
-      width: 95px;
-    }
-    &-third {
-      width: 70px;
-    }
-    &-fourth {
-      width: 102px;
-    }
+    margin-left: 25px;
   }
 }

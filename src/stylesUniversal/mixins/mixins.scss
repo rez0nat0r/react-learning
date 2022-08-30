@@ -1,3 +1,5 @@
+@import '../variables/variables.scss';
+
 @mixin BTN($color, $fw, $bcg, $border, $br, $flex, $f-direction, $j-content, $a-items) {
     color: $color;
     font-weight: $fw;

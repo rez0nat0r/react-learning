@@ -1,8 +1,12 @@
 @import '../../stylesUniversal/mixins/mixins.scss';
+@import '../../stylesUniversal/variables/variables.scss';
 
 .btn {
-    @include BTN (#ffffff, 600, #59abb0, none, 10px, flex, row, center, center);
+    @include BTN ($white, 600, $main-color, none, 10px, flex, row, center, center);
+    font-family: "Baloo2-Bold", "sans-serif";
+    font-size: 14px;
+    line-height: 22px;  
     &:hover {
-      background-color: #60dfe8;
+      background-color: $button-hover;
     }
   }

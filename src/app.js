@@ -1,10 +1,14 @@
-import Home from "../src/componentsBasic/home/home"
+import Home from "../src/componentsBasic/home/home";
 import "./app.scss";
+import Footer from "./componentsUniversal/footer/footer";
+import Header from "./componentsUniversal/header/header";
 
 const App = () => {
   return (
     <>
-    <Home/>
+      <Header/>
+      <Home />
+      <Footer/>
     </>
   );
 };
