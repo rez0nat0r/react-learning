@@ -1,3 +1,5 @@
+@import '../../../../stylesUniversal/variables/variables.scss';
+
 .subscribe {
   font-family: "Poppins-Regular", "sans-serif";
   font-size: 14px;
@@ -33,7 +35,14 @@
     display: inline-block;
   }
   &__button {
+    background: transparent;
+    color: $button-hover;
+    border: 1px $button-hover solid;
     width: 152px;
     height: 40px;
+    &:hover {
+      background: $button-hover;
+      color: $white;
+    }
   }
 }
