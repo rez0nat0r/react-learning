@@ -1,5 +1,5 @@
-import Info from "./home-sections/home-Info/home-info";
-import Subscribe from "./home-sections/home-subscribe/home-subscribe";
+import Info from "./homeSections/homeInfo/HomeInfo";
+import Subscribe from "./homeSections/homeSubscribe/HomeSubscribe";
 
 const Home = () => {
   return (

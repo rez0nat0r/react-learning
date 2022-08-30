@@ -1,6 +1,6 @@
-import "./home-subscribe.scss";
+import "./HomeSubscribe.scss";
 import inkstand from "../../../../assets/images/inkstand.png";
-import Button from '../../../../componentsUniversal/button/button';
+import Button from '../../../../componentsUniversal/button/Button';
 
 const Subscribe = () => {
   return (
