@@ -34,7 +34,7 @@ const Subscribe = () => {
                 text="Subscribe"
                 onClick={() => setShow(true)}
               />
-              <Modal show={show} />
+              <Modal show={show} onClose={() => setShow(false)}/>
             </div>
           </div>
         </div>
