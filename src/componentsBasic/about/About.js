@@ -1,15 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import map from '../../assets/images/map.png';
-import point from '../../assets/icons/dot-on-the-map.png';
-import phone from '../../assets/icons/phone.png';
-import facebook from '../../assets/icons/facebook.png';
-import instagram from '../../assets/icons/instagram.png';
-import twitter from '../../assets/icons/twitter.png';
+import "./About.scss";
+
+import map from "../../assets/images/map.png";
+import point from "../../assets/icons/dot-on-the-map.png";
+import phone from "../../assets/icons/phone.png";
+import facebook from "../../assets/icons/facebook.png";
+import instagram from "../../assets/icons/instagram.png";
+import twitter from "../../assets/icons/twitter.png";
 
 const About = () => {
   return (
-      <section className="about">
+    <div className="container">
+      <div className="about">
         <div className="about__content">
           <h1 className="about__content-title">Who we are?</h1>
           <p className="about__content-text about__first">
@@ -25,7 +28,6 @@ const About = () => {
             massa, viverra tempor etiam hendrerit eget amet. Odio magna ultrices
             diam, facilisis. Habitant diam eros molestie pretium.
           </p>
-
           <p className="about__content-text about__second">
             Viverra parturient eu tincidunt sem. Aliquet ultrices volutpat orci
             tristique. Sit eleifend donec bibendum sed fermentum. Amet,
@@ -39,7 +41,6 @@ const About = () => {
             mollis dictum ullamcorper pretium. Pellentesque ac nunc, eu
             fermentum erat nunc vel natoque volutpat.
           </p>
-
           <p className="about__content-text about__third">
             Et ac a leo et rhoncus montes, enim viverra. Nulla aliquam ut massa,
             praesent viverra integer massa justo. Vitae pellentesque quis sit
@@ -53,24 +54,25 @@ const About = () => {
           </p>
         </div>
         <div className="about__contact">
-            <img src={map} alt="contact map" />
-            <div className="about__contact-variants">
-                <div className="about__contact-adress">
-                    <img src={point} alt="point icon" />
-                    <p></p>
-                </div>
-                <div className="about__contact-phone">
-                    <img src={phone} alt="phone icon" />
-                    <p></p>
-                </div>
-                <div className="about__contact-social">
-                    <img src={facebook} alt="facebook icon" />
-                    <img src={instagram} alt="instagram icon" />
-                    <img src={twitter} alt="twitter icon" />
-                </div>
+          <img className="about__map" src={map} alt="contact map" />
+          <div className="about__contact-variants">
+            <div className="about__contact-adress">
+              <img className="about__point about__icon" src={point} alt="point icon" />
+              <p>2464 Royal Ln. Mesa, New Jersey 45463</p>
             </div>
+            <div className="about__contact-phone">
+              <img className="about__phone about__icon" src={phone} alt="phone icon" />
+              <p>(208) 555-0112</p>
+            </div>
+            <div className="about__contact-social">
+              <img className="about__facebook about__icon" src={facebook} alt="facebook icon" />
+              <img className="about__instagram about__icon" src={instagram} alt="instagram icon" />
+              <img className="about__twitter about__icon" src={twitter} alt="twitter icon" />
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
   );
 };
 
