@@ -9,7 +9,9 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__top">
-          <img className="header__img" src={logo} alt="logo-img" />
+          <NavLink to="/">
+            <img className="header__img" src={logo} alt="logo-img" />
+          </NavLink>
           <nav className="menu">
             <ul className="menu__list">
               <li className="menu__item menu__item-header">
@@ -30,7 +32,7 @@ const Header = () => {
               </li>
               <li class="menu__item">
                 <NavLink
-                  to="/"
+                  to="/about"
                   className="menu__link menu__link-header menu__link-fourth"
                 >
                   About us
