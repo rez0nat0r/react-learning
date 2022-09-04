@@ -39,7 +39,9 @@ const Header = () => {
                 </NavLink>
               </li>
               <li class="menu__item">
+                <NavLink to="/apply">
                 <Button className="header__button" text="Apply" />
+                </NavLink>
               </li>
             </ul>
           </nav>
