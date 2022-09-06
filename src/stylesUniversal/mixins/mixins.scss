@@ -1,0 +1,13 @@
+@import '../variables/variables.scss';
+
+@mixin BTN($color, $fw, $bcg, $border, $br, $flex, $f-direction, $j-content, $a-items) {
+    color: $color;
+    font-weight: $fw;
+    background: $bcg;
+    border: $border;
+    border-radius: $br;
+    display: $flex;
+    flex-direction: $f-direction;
+    justify-content: $j-content;
+    align-items: $a-items;
+}

@@ -1,0 +1,49 @@
+.info {
+  font-family: "Poppins-Regular", "sans-serif";
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 56px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content {
+    width: 50%;
+    height: 348px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__box {
+    &-title {
+      font-family: "Baloo2-Bold", "sans-serif";
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 16px;
+    }
+    &-text {
+      margin-bottom: 16px;
+    }
+  }
+  &__list {
+    padding-left: 20px;
+    margin-bottom: 30px;
+    list-style-type: disc;
+    &-title {
+      font-family: "Poppins-Medium", "sans-serif";
+      font-weight: 500;
+      margin: 16px 0;
+    }
+  }
+  &__button {
+    width: 172px;
+    height: 52px;
+  }
+  &__img {
+    width: 458px;
+    height: 336px;
+    display: inline-block;
+  }
+}
