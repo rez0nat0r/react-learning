@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../componentsUniversal/button/Button";
 
-import './Apply.scss'
-import paints from '../../assets/images/paints.png';
+import "./Apply.scss";
+import paints from "../../assets/images/paints.png";
 
 const Apply = () => {
+  const [confirmation, setConfirmation] = useState(false);
+
   return (
     <div className="container">
       <div className="apply">
@@ -43,7 +45,7 @@ const Apply = () => {
               </div>
             </div>
           </form>
-          <Button />
+          <Button className="apply__form-btn" text="Apply" />
         </div>
         <img className="apply__img" src={paints} alt="apply img" />
       </div>
