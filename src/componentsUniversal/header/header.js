@@ -1,9 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
-import "./header.scss";
+import "./Header.scss";
 import logo from "../../assets/images/logo.png";
-import Button from "../Button";
+import Button from "../button/Button";
 
 const Header = () => {
   return (
@@ -38,7 +37,7 @@ const Header = () => {
                 </NavLink>
               </li>
               <li class="menu__item">
-                <Button className="btn header__button" text="Apply" />
+                <Button className="header__button" text="Apply" />
               </li>
             </ul>
           </nav>
