@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
-import "./HomeSubscribe.scss";
+import "./homeSubscribe.scss";
 import inkstand from "../../../../assets/images/inkstand.png";
-import Button from "../../../../componentsUniversal/button/Button";
+import Button from "../../../../components/button/Button";
 import Modal from "../../../modal/Modal";
 
 const Subscribe = () => {
-
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
   return (
     <section className="subscribe">
@@ -30,11 +29,11 @@ const Subscribe = () => {
                 updates and deals
               </p>
               <Button
-                className="subscribe__button"
+                className="btn subscribe__button"
                 text="Subscribe"
                 onClick={() => setShow(true)}
               />
-              <Modal show={show} onClose={() => setShow(false)}/>
+              <Modal show={show} onClose={() => setShow(false)} />
             </div>
           </div>
         </div>
