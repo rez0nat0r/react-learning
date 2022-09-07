@@ -1,8 +1,13 @@
-import "./HomeSubscribe.scss";
+import React, { useState } from "react";
+
+import "./homeSubscribe.scss";
 import inkstand from "../../../../assets/images/inkstand.png";
-import Button from '../../../../componentsUniversal/button/Button';
+import Button from "../../../../components/Button";
+import Modal from "../../../Modal/Modal";
 
 const Subscribe = () => {
+  const [show, setShow] = useState(false);
+
   return (
     <section className="subscribe">
       <div className="container">
@@ -23,7 +28,12 @@ const Subscribe = () => {
                 Subscribe to our newsletter to stay tuned and get hottest
                 updates and deals
               </p>
-              <Button className='subscribe__button' text='Subscribe'/>
+              <Button
+                className="btn subscribe__button"
+                text="Subscribe"
+                onClick={() => setShow(true)}
+              />
+              <Modal show={show} onClose={() => setShow(false)} />
             </div>
           </div>
         </div>

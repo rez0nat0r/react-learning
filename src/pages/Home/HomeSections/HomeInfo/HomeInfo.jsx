@@ -1,6 +1,6 @@
-import "./HomeInfo.scss";
+import "./homeInfo.scss";
 import paris from "../../../../assets/images/eiffel-tower.png";
-import Button from '../../../../componentsUniversal/button/Button';
+import Button from '../../../../components/Button';
 
 const Info = () => {
   return (
@@ -34,7 +34,7 @@ const Info = () => {
                   pellentesque lacus.
                 </li>
               </ul>
-              <Button className='info__button' text='Apply now'/>
+              <Button className="btn info__button" text='Apply now'/>
             </div>
           </div>
           <div className="wrapper">
