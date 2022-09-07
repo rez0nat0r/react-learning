@@ -1,7 +1,7 @@
-import Home from "./pages/home/Home";
+import Home from "./pages/Home/Home";
 
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 import "./app.scss";
 

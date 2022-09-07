@@ -1,6 +1,6 @@
 import "./homeInfo.scss";
 import paris from "../../../../assets/images/eiffel-tower.png";
-import Button from '../../../../components/button/Button';
+import Button from '../../../../components/Button';
 
 const Info = () => {
   return (

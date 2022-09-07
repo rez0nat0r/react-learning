@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import "./homeSubscribe.scss";
 import inkstand from "../../../../assets/images/inkstand.png";
-import Button from "../../../../components/button/Button";
-import Modal from "../../../modal/Modal";
+import Button from "../../../../components/Button";
+import Modal from "../../../Modal/Modal";
 
 const Subscribe = () => {
   const [show, setShow] = useState(false);
