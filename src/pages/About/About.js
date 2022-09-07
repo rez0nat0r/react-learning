@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./About.scss";
+import "./about.scss";
 
 import map from "../../assets/images/map.png";
 import point from "../../assets/icons/dot-on-the-map.png";

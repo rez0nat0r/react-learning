@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../componentsUniversal/button/Button";
+import Button from "../../components/Button";
 
 import "./Modal.scss";
 
@@ -35,7 +35,7 @@ const Modal = ({ show, onClose }) => {
                     placeholder="E-mail"
                     defaultValue=""
                   />
-                <Button className="modal__body-btn" text="Subscribe" />
+                <Button className="btn modal__body-btn" text="Subscribe" />
               </div>
             </div>
             <div className="modal__footer">
