@@ -1,0 +1,12 @@
+@import '../../styles/mixins/mixins.scss';
+@import '../../styles/variables/variables.scss';
+
+.btn {
+    @include BTN ($white, 600, $main-color, none, 10px, flex, row, center, center);
+    font-family: "Baloo2-Bold", "sans-serif";
+    font-size: 14px;
+    line-height: 22px;  
+    &:hover {
+      background-color: $button-hover;
+    }
+  }
