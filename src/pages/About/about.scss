@@ -1,0 +1,52 @@
+.about {
+    padding: 20px 0 40px 0;
+    display: flex;
+    justify-content: space-around;
+    &__content {
+        min-width: 574px;
+        height: auto;
+        padding-right: 140px;
+    }
+    &__contact-phone {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+    &__contact-adress {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    &__map {
+        width: 456px;
+        height: 455px;
+        margin-bottom: 29px;
+    }
+    &__point {
+        width: 23px;
+        height: 20px;
+    }
+    &__phone {
+        width: 20px;
+        height: 20px;
+    }
+    &__facebook {
+        width: 19px;
+        height: 19px;
+    }
+    &__instagram {
+        width: 19px;
+        height: 19px;
+    }
+    &__twitter {
+        width: 20px;
+        height: 16px;
+    }
+    &__icon {
+        margin-right: 32px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
