@@ -73,7 +73,7 @@ const Apply = () => {
               </div>
             </div>
           </form>
-          <NavLink to="/comfirmation">
+          <NavLink to="/confirmation">
             <Button className="btn apply__form-btn" text="Apply" />
           </NavLink>
         </div>

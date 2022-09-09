@@ -6,6 +6,9 @@
         min-width: 574px;
         height: auto;
         padding-right: 140px;
+        &-title {
+            margin-top: 0;
+        }
     }
     &__contact-phone {
         display: flex;

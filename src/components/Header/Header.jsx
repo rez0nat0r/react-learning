@@ -25,7 +25,7 @@ const Header = () => {
               </li>
               <li class="menu__item">
                 <NavLink
-                  to="/"
+                  to="/teachers"
                   className="menu__link menu__link-header menu__link-second"
                 >
                   Teachers

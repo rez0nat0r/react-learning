@@ -1,0 +1,14 @@
+.teachers {
+  margin-bottom: 32px;
+  &__body-main {
+    display: grid;
+    justify-content: space-around;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &__body-title {
+    font-family: "Baloo2-Bold", sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}

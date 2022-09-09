@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Apply from "./pages/Apply";
 import Confirmation from "./pages/Confirmation";
+import Teachers from "./pages/Teachers";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -18,7 +19,8 @@ const App = () => (
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/apply" element={<Apply />} />
-      <Route path="/comfirmation" element={<Confirmation />} />
+      <Route path="/confirmation" element={<Confirmation />} />
+      <Route path="/teachers" element={<Teachers />} />
     </Routes>
     <Footer />
   </>
