@@ -17,7 +17,7 @@ const Header = () => {
             <ul className="menu__list">
               <li className="menu__item menu__item-header">
                 <NavLink
-                  to="/"
+                  to="/courses"
                   className="menu__link menu__link-header menu__link-first"
                 >
                   Courses
