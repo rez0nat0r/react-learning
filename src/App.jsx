@@ -7,6 +7,7 @@ import Apply from "./pages/Apply";
 import Confirmation from "./pages/Confirmation";
 import Teachers from "./pages/Teachers";
 import Courses from "./pages/Courses";
+import Course from "./pages/Course";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -23,6 +24,7 @@ const App = () => (
       <Route path="/confirmation" element={<Confirmation />} />
       <Route path="/teachers" element={<Teachers />} />
       <Route path="/courses" element={<Courses />} />
+      <Route path="/course" element={<Course />} />
     </Routes>
     <Footer />
   </>

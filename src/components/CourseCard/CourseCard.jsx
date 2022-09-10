@@ -1,7 +1,9 @@
+import { NavLink } from "react-router-dom";
+
 import Button from "../Button";
 
 import "./courseCard.scss";
-import card from '../../assets/images/CourseCard.png';
+import card from "../../assets/images/CourseCard.png";
 
 const CourseCard = () => {
   return (
@@ -25,7 +27,9 @@ const CourseCard = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing nec
         odio pulvinar...
       </p>
-      <Button className="btn card__btn" text="Apply" />
+      <NavLink to="/course">
+        <Button className="btn card__btn" text="Apply" />
+      </NavLink>
     </section>
   );
 };

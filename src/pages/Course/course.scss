@@ -1,0 +1,78 @@
+@import "../../styles/variables/variables.scss";
+
+* {
+  margin: 0;
+}
+
+.course {
+  &__main {
+    display: flex;
+  }
+  &__body {
+    margin-right: 254px;
+    &-title {
+      font-family: "Baloo2-Bold", sans-serif;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 12px;
+    }
+    &-info {
+      display: flex;
+      align-items: center;
+      font-family: "Poppins-Light", sans-serif;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 12px;
+      color: $apply-color;
+      margin-bottom: 8px;
+      &-text {
+        width: 102px;
+        margin: 0 15px 8px 0;
+      }
+    }
+    &-description {
+      margin-bottom: 20px;
+      &-title {
+        font-family: "Poppins-Medium", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 0 4px 0;
+      }
+      &-subtitle {
+        font-family: "Poppins-Regular", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 15px;
+      }
+    }
+    &-amount {
+      display: flex;
+      align-items: center;
+      margin-bottom: 28px;
+      &-text {
+        font-family: "Poppins-SemiBold", sans-serif;
+        font-size: 16px;
+        line-height: 16px;
+        width: 95px;
+        color: $apply-color;
+      }
+      &-price {
+        font-family: "Baloo2-Bold", sans-serif;
+        font-size: 24px;
+        line-height: 28px;
+        width: 96px;
+        color: $button-hover;
+      }
+    }
+  }
+  &__btn {
+    width: 172px;
+    height: 52px;
+    margin-bottom: 228px;
+  }
+  &__img {
+    width: 457px;
+    height: 456px;
+  }
+}
