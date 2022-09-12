@@ -5,7 +5,7 @@ import teacher from '../../assets/images/teacher.png';
 const Teacher = () => {
   return (
     <section className="teacher">
-      <img className="teacher__photo" src={teacher} alt="teacher photo" />
+      <img className="teacher__photo" src={teacher} alt="teacher img" />
       <h3 className="teacher__name">Jamie Brown</h3>
       <div className="teacher__info">
         <h5 className="teacher__info-title">Courses:</h5>
