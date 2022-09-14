@@ -1,30 +1,28 @@
+import React from 'react';
+
 import "./teacher.scss";
 
-import teacher from '../../assets/images/teacher.png';
-
-const Teacher = () => {
+const Teacher = (props) => {
   return (
     <section className="teacher">
-      <img className="teacher__photo" src={teacher} alt="teacher img" />
-      <h3 className="teacher__name">Jamie Brown</h3>
+      <img className="teacher__photo" src={props.photo} alt="teacher img" />
+      <h3 className="teacher__name">{props.first_name} {props.last_name}</h3>
       <div className="teacher__info">
         <h5 className="teacher__info-title">Courses:</h5>
         <p className="teacher__info-text">
-          Basic Sketching <br /> Watercolor BasicsAnime <br /> Sketching
+          {props.courses}
         </p>
       </div>
       <div className="teacher__info">
         <h5 className="teacher__info-title">Education:</h5>
         <p className="teacher__info-text">
-          Cambridge university, arts bachelor
+          {props.education}
         </p>
       </div>
       <div className="teacher__info">
         <h5 className="teacher__info-title">About me:</h5>
         <p className="teacher__info-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at
-          dignissim tellus blandit laoreet sed id. Iaculis accumsan nunc tellus
-          diam blandit massa commodo ac ut.
+          {props.about}
         </p>
       </div>
     </section>
