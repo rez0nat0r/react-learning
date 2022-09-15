@@ -21,7 +21,7 @@ import "./app.scss";
 
 const App = () => {
   const store = createStore(reducer, applyMiddleware(thunk))
-  // console.log(process);
+  
   return (
     <Provider store={store}>
       <Header />

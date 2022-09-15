@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 import Button from "../../components/Button";
@@ -109,13 +108,11 @@ const Apply = () => {
                 />
               </div>
             </div>
-            <NavLink to="/confirmation">
               <Button
                 className="btn apply__form-btn"
                 text="Apply"
                 type="submit"
               />
-            </NavLink>
           </form>
         </div>
         <img className="apply__img" src={paints} alt="apply img" />
