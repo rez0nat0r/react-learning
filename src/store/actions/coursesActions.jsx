@@ -41,11 +41,11 @@ const getCoursesAction = () => (dispatch) => {
     );
 };
 
-const setSelectedCourses = (course) => (dispatch) => {
+const setSelectedCourse = (course) => (dispatch) => {
   return dispatch({
     type: SELECTED_COURSE,
     payload: course,
   });
 };
 
-export { getCoursesAction, setSelectedCourses, fetchCoursesRequest, fetchCoursesSuccess, fetchCoursesFailure };
+export { getCoursesAction, setSelectedCourse, fetchCoursesRequest, fetchCoursesSuccess, fetchCoursesFailure };

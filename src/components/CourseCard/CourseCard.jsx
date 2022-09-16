@@ -37,7 +37,11 @@ const CourseCard = (props) => {
         </p>
       </div>
       <p className="card__subtitle">{props.description_short}</p>
-      <Button className="btn card__btn" text="Apply" />
+      <Button className="btn card__btn" text="Apply" onClick={(e) => {
+        e.stopPropagation();
+        console.log(`test`);
+        navigate(`/apply`);
+      }}/>
     </div>
   );
 };

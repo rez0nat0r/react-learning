@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
+
+import fetchCourses from "../../services/coursesRequest";
 
 import Button from "../../components/Button/Button";
 
@@ -11,6 +13,14 @@ const Course = () => {
   const { id } = useParams();
   const data = useSelector((state) => state.courses);
   const singleCourse = data.courses.find((props) => props.id === id) || {};
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (data.courses.length === 0) {
+      dispatch(fetchCourses());
+    }
+  }, []);
 
   return (
     <section className="course">

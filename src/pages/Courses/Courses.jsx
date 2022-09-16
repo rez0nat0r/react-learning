@@ -8,7 +8,9 @@ import "./courses.scss";
 
 const Courses = ({ courseData, fetchCourses }) => {
   useEffect(() => {
-    fetchCourses();
+    if (courseData.courses.length === 0) {
+      fetchCourses();
+    }
   }, [fetchCourses]);
 
   return (
@@ -18,10 +20,7 @@ const Courses = ({ courseData, fetchCourses }) => {
           <h1 className="courses__body-title">Pick your perfect course!</h1>
           <div className="courses__body-main">
             {courseData.courses.map((course) => (
-              <CourseCard
-                key={course.id}
-                {...course}
-              />
+              <CourseCard key={course.id} {...course} />
             ))}
           </div>
         </div>
