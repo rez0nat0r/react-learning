@@ -8,15 +8,10 @@ import axios from "axios";
 
 const { REACT_APP_HOST } = process.env;
 
-// const coursesRequest = {
-//   getAllCourses: () => {
-//     return axios.get(`${REACT_APP_HOST}/courses`);
-//   },
-// };
-
 const fetchCourses = () => {
   return (dispatch) => {
     dispatch(fetchCoursesRequest);
+    console.log('test');
     axios
       .get(`${REACT_APP_HOST}/courses`)
       .then(({ data }) => {

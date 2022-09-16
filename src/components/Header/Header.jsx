@@ -23,7 +23,7 @@ const Header = () => {
                   Courses
                 </NavLink>
               </li>
-              <li class="menu__item">
+              <li className="menu__item">
                 <NavLink
                   to="/teachers"
                   className="menu__link menu__link-header menu__link-second"
@@ -31,7 +31,7 @@ const Header = () => {
                   Teachers
                 </NavLink>
               </li>
-              <li class="menu__item">
+              <li className="menu__item">
                 <NavLink
                   to="/about"
                   className="menu__link menu__link-header menu__link-fourth"
@@ -40,7 +40,7 @@ const Header = () => {
                 </NavLink>
               </li>
               <NavLink to="/apply">
-                <li class="menu__item">
+                <li className="menu__item">
                   <Button className="btn header__button" text="Apply" />
                 </li>
               </NavLink>

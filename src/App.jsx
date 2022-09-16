@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { createStore, applyMiddleware } from "redux"
-import { Provider } from "react-redux"
-import thunk from "redux-thunk"
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
 
-import reducer from './store/reducers';
+import reducer from "./store/reducers";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -20,8 +20,8 @@ import Header from "./components/Header";
 import "./app.scss";
 
 const App = () => {
-  const store = createStore(reducer, applyMiddleware(thunk))
-  
+  const store = createStore(reducer, applyMiddleware(thunk));
+
   return (
     <Provider store={store}>
       <Header />
@@ -32,7 +32,7 @@ const App = () => {
         <Route path="/confirmation" element={<Confirmation />} />
         <Route path="/teachers" element={<Teachers />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/course" element={<Course />} />
+        <Route path="/course/:id" element={<Course />} />
       </Routes>
       <Footer />
     </Provider>

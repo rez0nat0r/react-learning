@@ -19,13 +19,8 @@ const Courses = ({ courseData, fetchCourses }) => {
           <div className="courses__body-main">
             {courseData.courses.map((course) => (
               <CourseCard
-                thumbnail_img_url={course.thumbnail_img_url}
-                name={course.name}
-                price={course.price}
-                level={course.level}
-                duration={course.duration}
-                periodicity={course.periodicity}
-                description_short={course.description_short}
+                key={course.id}
+                {...course}
               />
             ))}
           </div>
