@@ -1,15 +1,18 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import fetchCourses from "../../services/coursesRequest";
 
 import CourseCard from "../../components/CourseCard";
 
 import "./courses.scss";
 
-const Courses = ({ courseData, fetchCourses }) => {
+const Courses = () => {
+  const courseData = useSelector((state) => state.courses);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (courseData.courses.length === 0) {
-      fetchCourses();
+      dispatch(fetchCourses());
     }
   }, [fetchCourses]);
 
@@ -29,16 +32,4 @@ const Courses = ({ courseData, fetchCourses }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    courseData: state.courses,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchCourses: () => dispatch(fetchCourses()),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Courses);
+export default Courses;

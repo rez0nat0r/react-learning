@@ -3,7 +3,6 @@ import {
   FETCH_COURSES_REQUEST,
   FETCH_COURSES_SUCCESS,
   FETCH_COURSES_FAILED,
-  SELECTED_COURSE,
 } from "../types/coursesTypes";
 
 const fetchCoursesRequest = () => {
@@ -41,11 +40,9 @@ const getCoursesAction = () => (dispatch) => {
     );
 };
 
-const setSelectedCourse = (course) => (dispatch) => {
-  return dispatch({
-    type: SELECTED_COURSE,
-    payload: course,
-  });
+export {
+  getCoursesAction,
+  fetchCoursesRequest,
+  fetchCoursesSuccess,
+  fetchCoursesFailure,
 };
-
-export { getCoursesAction, setSelectedCourse, fetchCoursesRequest, fetchCoursesSuccess, fetchCoursesFailure };

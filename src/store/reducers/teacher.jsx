@@ -10,8 +10,8 @@ const initialState = {
   error: "",
 };
 
-const teacherReducer = (state = initialState, action) => {
-  switch (action.type) {
+const teacherReducer = (state = initialState, {type, payload}) => {
+  switch (type) {
     case FETCH_TEACHERS_REQUEST:
       return {
         ...state,
@@ -20,14 +20,14 @@ const teacherReducer = (state = initialState, action) => {
     case FETCH_TEACHERS_SUCCESS:
       return {
         loading: false,
-        teachers: action.payload,
+        teachers: payload,
         error: "",
       };
     case FETCH_TEACHERS_FAILURE:
       return {
         loading: false,
         teachers: [],
-        error: action.payload,
+        error: payload,
       };
     default:
       return state;

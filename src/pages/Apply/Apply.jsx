@@ -1,4 +1,6 @@
 import React from "react";
+// import ReactDOM from "react-dom";
+
 import { useForm } from "react-hook-form";
 
 import Button from "../../components/Button";
@@ -7,12 +9,16 @@ import "./apply.scss";
 import paints from "../../assets/images/paints.png";
 
 const Apply = () => {
-  const { register, errors, handleSubmit } = useForm();
+  // const data = useSelector((state) => state.courses)
+
+  // const [course, setCourse] = useState();
+  // const [group, setGroup] = useState();
+  // const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
+
+  const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log("RESULT", data);
-    alert(JSON.stringify(data));
   };
-  console.log(errors);
 
   return (
     <div className="container">
@@ -32,7 +38,8 @@ const Apply = () => {
                 <h5 className="apply__form-content-text">Course</h5>
                 <select
                   className="apply__form-content-input"
-                  {...register("Course", { required: true })}
+                  name="Course"
+                  {...register("course", { required: true })}
                 >
                   <option selected disabled value="Select...">
                     Select...
@@ -47,7 +54,8 @@ const Apply = () => {
                 <h5 className="apply__form-content-text">Group</h5>
                 <select
                   className="apply__form-content-input"
-                  {...register("Schedule", { required: true })}
+                  name="Schedule"
+                  {...register("schedule", { required: true })}
                 >
                   <option selected disabled value="Select...">
                     Select...
@@ -101,18 +109,18 @@ const Apply = () => {
                   {...register("Mobile number", {
                     required: true,
                     maxLength: 12,
-                    minLength: 10,
+                    minLength: 8,
                     pattern:
                       /^\(?([0-9]{3})\)([0-9]{3})[-]?([0-9]{2})[-]?([0-9]{2})$/,
                   })}
                 />
               </div>
             </div>
-              <Button
-                className="btn apply__form-btn"
-                text="Apply"
-                type="submit"
-              />
+            <Button
+              className="btn apply__form-btn"
+              text="Apply"
+              type="submit"
+            />
           </form>
         </div>
         <img className="apply__img" src={paints} alt="apply img" />

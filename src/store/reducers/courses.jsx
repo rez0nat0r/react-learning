@@ -11,8 +11,8 @@ const initialState = {
   error: "",
 };
 
-const coursesReducer = (state = initialState, action) => {
-  switch (action.type) {
+const coursesReducer = (state = initialState, {type, payload}) => {
+  switch (type) {
     case FETCH_COURSES_REQUEST:
       return {
         ...state,
@@ -20,19 +20,19 @@ const coursesReducer = (state = initialState, action) => {
       };
     case FETCH_COURSES_SUCCESS:
       return {
-        courses: action.payload,
+        courses: payload,
         loading: false,
         error: "",
       };
     case FETCH_COURSES_FAILED:
       return {
         ...state,
-        error: action.payload,
+        error: payload,
       };
     case SELECTED_COURSE:
       return {
         ...state,
-        selectedCourse: action.payload,
+        selectedCourse: payload,
       };
       default: return state
   }

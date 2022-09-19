@@ -1,6 +1,6 @@
 import * as axios from "axios";
 
-const REACT_APP_HOST = process.env
+const { REACT_APP_HOST } = process.env;
 
 const sendEmail = (inputValue) => {
   return axios

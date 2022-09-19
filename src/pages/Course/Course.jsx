@@ -12,7 +12,7 @@ import "./course.scss";
 const Course = () => {
   const { id } = useParams();
   const data = useSelector((state) => state.courses);
-  const singleCourse = data.courses.find((props) => props.id === id) || {};
+  const singleCourse = data.courses.find((course) => course.id === id) || {};
 
   const dispatch = useDispatch();
 
