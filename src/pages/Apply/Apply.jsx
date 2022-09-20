@@ -1,24 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 // import ReactDOM from "react-dom";
 
 import { useForm } from "react-hook-form";
 
 import Button from "../../components/Button";
 
+import fetchCourses from "../../services/coursesRequest";
+
+import { setSelectedCourse } from "../../store/actions/coursesActions";
+import applyRequest from "../../services/applyRequest";
+
 import "./apply.scss";
 import paints from "../../assets/images/paints.png";
 
 const Apply = () => {
-  // const data = useSelector((state) => state.courses)
+  const applyData = useSelector((state) => state.courses);
+  const dispatch = useDispatch();
 
-  // const [course, setCourse] = useState();
-  // const [group, setGroup] = useState();
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
+  useEffect(() => {
+    if (applyData.courses.length === 0) {
+      dispatch(fetchCourses());
+    }
+  }, [fetchCourses]);
+
+  const courses = applyData.courses.map((course) => {
+    return {
+      value: course,
+      display: course.name,
+    };
+  });
+
+  const displayCourses = [{ value: null, display: "Select..." }].concat(
+    courses
+  );
+
+  const [submit, setSubmit] = useState(false);
+
 
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
-  };
+  const onSubmit = (data) => {};
 
   return (
     <div className="container">
@@ -38,41 +59,19 @@ const Apply = () => {
                 <h5 className="apply__form-content-text">Course</h5>
                 <select
                   className="apply__form-content-input"
-                  name="Course"
                   {...register("course", { required: true })}
                 >
-                  <option selected disabled value="Select...">
-                    Select...
-                  </option>
-                  <option value="Basic Sketching">Basic Sketching</option>
-                  <option value="Watercolor Basics">Watercolor Basics</option>
-                  <option value="Digital Sketching">Digital Sketching</option>
-                  <option value="Some other stuff">Some other stuff</option>
+                  {displayCourses.map((course) => (
+                    <option value={course.value}>{course.display}</option>
+                  ))}
                 </select>
               </div>
               <div className="apply__form-content">
                 <h5 className="apply__form-content-text">Group</h5>
                 <select
                   className="apply__form-content-input"
-                  name="Schedule"
-                  {...register("schedule", { required: true })}
-                >
-                  <option selected disabled value="Select...">
-                    Select...
-                  </option>
-                  <option value="mon/wed/fri 7pm-9pm">
-                    mon/wed/fri 7pm-9pm
-                  </option>
-                  <option value="mon/wed/fri 7pm-9pm">
-                    mon/wed/fri 7pm-9pm
-                  </option>
-                  <option value="mon/wed/fri 7pm-9pm">
-                    mon/wed/fri 7pm-9pm
-                  </option>
-                  <option value="mon/wed/fri 7pm-9pm">
-                    mon/wed/fri 7pm-9pm
-                  </option>
-                </select>
+                  {...register("group", { required: true })}
+                ></select>
               </div>
             </div>
             <div className="apply__form-second">
