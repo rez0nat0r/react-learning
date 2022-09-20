@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-// import ReactDOM from "react-dom";
 
 import { useForm } from "react-hook-form";
 
@@ -13,7 +12,6 @@ import applyRequest from "../../services/applyRequest";
 
 import "./apply.scss";
 import paints from "../../assets/images/paints.png";
-import { useState } from "react";
 
 const Apply = () => {
   const applyData = useSelector((state) => state.courses);
@@ -176,6 +174,7 @@ const Apply = () => {
               className="btn apply__form-btn"
               text="Apply"
               type="submit"
+              onClick={submit}
             />
           </form>
         </div>
