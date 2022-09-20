@@ -13,6 +13,7 @@ import applyRequest from "../../services/applyRequest";
 
 import "./apply.scss";
 import paints from "../../assets/images/paints.png";
+import { useState } from "react";
 
 const Apply = () => {
   const applyData = useSelector((state) => state.courses);
@@ -37,6 +38,51 @@ const Apply = () => {
 
   const [submit, setSubmit] = useState(false);
 
+  const [course, setCourse] = useState(
+    useSelector((state) => state.courses.selectedCourse)
+  );
+  const [group, setGroup] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const [groups, setGroups] = useState([]);
+
+  function setDataToState(e) {
+    switch (e.target.name) {
+      case "course":
+        setCourse(e.target.value);
+        break;
+      case "group":
+        setGroup(e.target.value);
+        break;
+      case "fullName":
+        setName(e.target.value);
+        break;
+      case "email":
+        setEmail(e.target.value);
+        break;
+      case "phone":
+        setPhone(e.target.value);
+        break;
+      default:
+        break;
+    }
+  }
+
+  function submit(event) {
+    const userData = {
+      courseId: course.id,
+      groupId: group.id,
+      full_name: name,
+      email: email,
+      phone: phone,
+    };
+    setSubmit(true);
+    dispatch(setSelectedCourse(null));
+    applyRequest(userData);
+    event.preventDefault();
+  }
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {};
@@ -59,6 +105,7 @@ const Apply = () => {
                 <h5 className="apply__form-content-text">Course</h5>
                 <select
                   className="apply__form-content-input"
+                  name="course" defaultValue={course} value={applyData.courses} onChange={(el) => { setCourse(el) }}
                   {...register("course", { required: true })}
                 >
                   {displayCourses.map((course) => (
@@ -70,6 +117,8 @@ const Apply = () => {
                 <h5 className="apply__form-content-text">Group</h5>
                 <select
                   className="apply__form-content-input"
+                  name="group" disabled={!course} value={groups}
+                  onChange={(el) => setGroup(el)}
                   {...register("group", { required: true })}
                 ></select>
               </div>
@@ -80,6 +129,9 @@ const Apply = () => {
                 <input
                   className="apply__form-content-input"
                   type="text"
+                  name="fullName"
+                  value={name}
+                  onChange={setDataToState}
                   {...register("Full name", {
                     required: true,
                     maxLength: 30,
@@ -92,6 +144,9 @@ const Apply = () => {
                   className="apply__form-content-input"
                   type="text"
                   placeholder="email@email.com"
+                  name="email"
+                  value={email}
+                  onChange={setDataToState}
                   {...register("Email", {
                     required: true,
                     pattern:
@@ -104,6 +159,8 @@ const Apply = () => {
                 <input
                   className="apply__form-content-input"
                   type="text"
+                  value={phone}
+                  onChange={setDataToState}
                   placeholder="(___)___-__-__"
                   {...register("Mobile number", {
                     required: true,
