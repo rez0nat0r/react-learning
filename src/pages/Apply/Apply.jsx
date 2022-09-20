@@ -31,15 +31,13 @@ const Apply = () => {
     };
   });
 
-  const displayCourses = [{ value: null, display: "Select..." }].concat(
-    courses
-  );
-
-  const [submit, setSubmit] = useState(false);
-
-
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, watch } = useForm();
   const onSubmit = (data) => {};
+
+  const selectedCourse = watch("course");
+
+  const groups = courses.find((course) => course.value.id === selectedCourse)
+    ?.value.groups;
 
   return (
     <div className="container">
@@ -59,10 +57,14 @@ const Apply = () => {
                 <h5 className="apply__form-content-text">Course</h5>
                 <select
                   className="apply__form-content-input"
+                  name="course"
+                  placeholder="Select..."
                   {...register("course", { required: true })}
                 >
-                  {displayCourses.map((course) => (
-                    <option value={course.value}>{course.display}</option>
+                  {courses.map((course) => (
+                    <option key={course.value.id} value={course.value.id}>
+                      {course.display}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -71,7 +73,13 @@ const Apply = () => {
                 <select
                   className="apply__form-content-input"
                   {...register("group", { required: true })}
-                ></select>
+                >
+                  {groups?.map((group) => (
+                    <option key={group.id} value={group.id}>
+                      {group.days.join("/")} {group.time} {group.mode}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
             <div className="apply__form-second">
