@@ -7,12 +7,13 @@ import Teacher from "../../components/Teacher";
 import "./teachers.scss";
 
 const Teachers = () => {
-  const teacherData = useSelector((state) => state.teacher)
+  const teacherData = useSelector((state) => state.teacher);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchTeachers());
+      dispatch(fetchTeachers());
   }, [fetchTeachers]);
+
   return (
     <section className="teachers">
       <div className="container">

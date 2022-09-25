@@ -44,7 +44,7 @@ const Course = () => {
               </h5>
               <ul className="course__body-description-subtitle">
                 <li className="course__body-description-subtitle-list">
-                  {singleCourse.description_full}
+                  {singleCourse.descriptionFull}
                 </li>
               </ul>
             </div>
@@ -60,7 +60,7 @@ const Course = () => {
           </div>
           <img
             className="course__img"
-            src={singleCourse.full_img_url}
+            src={singleCourse.fullImgUrl}
             alt="course img"
           />
         </div>

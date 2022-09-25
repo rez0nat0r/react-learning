@@ -14,6 +14,9 @@ import "./apply.scss";
 import paints from "../../assets/images/paints.png";
 
 const Apply = () => {
+  // const [courseId, setCourseId] = useState("");
+  // const [group, setGroup] = useState("");
+
   const applyData = useSelector((state) => state.courses);
   const dispatch = useDispatch();
 
@@ -30,7 +33,7 @@ const Apply = () => {
     };
   });
 
-  const { register, handleSubmit, watch } = useForm();
+  const { register, handleSubmit, watch, getValues } = useForm();
   const onSubmit = (data) => {
     applyRequest(data);
     console.log(data);
@@ -64,12 +67,9 @@ const Apply = () => {
                   <h5 className="apply__form-content-text">Course</h5>
                   <select
                     className="apply__form-content-input"
-                    name="course"
                     {...register("course", { required: true })}
                   >
-                    <option selected disabled>
-                      Select...
-                    </option>
+                    <option>Select...</option>
                     {courses.map((course) => (
                       <option key={course.value.id} value={course.value.id}>
                         {course.display}
@@ -81,12 +81,11 @@ const Apply = () => {
                   <h5 className="apply__form-content-text">Group</h5>
                   <select
                     className="apply__form-content-input"
+                    // disabled={!course}
+                    // value={group}
+                    // onChange={(e) => setGroup(e.target.value) && setCourse}
                     {...register("group", { required: true })}
                   >
-                    <option selected disabled>
-                      Select...
-                    </option>
-
                     {groups?.map((group) => (
                       <option key={group.id} value={group.id}>
                         {group.days.join("/")} {group.time} {group.mode}

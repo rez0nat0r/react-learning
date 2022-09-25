@@ -4,8 +4,8 @@ import "./teacher.scss";
 
 const Teacher = ({
   photo,
-  first_name,
-  last_name,
+  firstName,
+  lastName,
   courses,
   education,
   about,
@@ -14,7 +14,7 @@ const Teacher = ({
     <section className="teacher">
       <img className="teacher__photo" src={photo} alt="teacher img" />
       <h3 className="teacher__name">
-        {first_name} {last_name}
+        {firstName} {lastName}
       </h3>
       <div className="teacher__info">
         <h5 className="teacher__info-title">Courses:</h5>

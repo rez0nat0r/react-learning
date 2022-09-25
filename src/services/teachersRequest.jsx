@@ -6,7 +6,10 @@ import {
 
 import axios from "axios";
 
-const {REACT_APP_HOST} = process.env;
+import { morphism } from "morphism";
+import { teachersMorphism } from "./teachersMorphism";
+
+const { REACT_APP_HOST } = process.env;
 
 const fetchTeachers = () => {
   return (dispatch) => {
@@ -14,7 +17,8 @@ const fetchTeachers = () => {
     axios
       .get(`${REACT_APP_HOST}/teachers`)
       .then(({ data }) => {
-        dispatch(fetchTeachersSuccess(data));
+        const result = morphism(teachersMorphism, data);
+        dispatch(fetchTeachersSuccess(result));
       })
       .catch(({ message }) => {
         dispatch(fetchTeachersFailure(message));

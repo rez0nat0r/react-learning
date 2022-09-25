@@ -8,13 +8,13 @@ import "./courseCard.scss";
 
 const CourseCard = ({
   id,
-  thumbnail_img_url,
+  thumbnailImgUrl,
   name,
   price,
   level,
   duration,
   periodicity,
-  description_short,
+  descriptionShort,
 }) => {
   const navigate = useNavigate();
 
@@ -27,7 +27,7 @@ const CourseCard = ({
         navigate(`/course/${id}`);
       }}
     >
-      <img className="card-img" src={thumbnail_img_url} alt="course img" />
+      <img className="card-img" src={thumbnailImgUrl} alt="course img" />
       <div className="card__title">
         <h4 className="card__title-text">{name}</h4>
         <p className="card__title-price">$ {price}</p>
@@ -42,7 +42,7 @@ const CourseCard = ({
           {duration} <br /> {periodicity}
         </p>
       </div>
-      <p className="card__subtitle">{description_short}</p>
+      <p className="card__subtitle">{descriptionShort}</p>
       <NavLink to="/apply">
         <Button className="btn card__btn" text="Apply" />
       </NavLink>
