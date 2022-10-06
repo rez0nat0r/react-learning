@@ -17,21 +17,21 @@ const Header = () => {
             <ul className="menu__list">
               <li className="menu__item menu__item-header">
                 <NavLink
-                  to="/"
+                  to="/courses"
                   className="menu__link menu__link-header menu__link-first"
                 >
                   Courses
                 </NavLink>
               </li>
-              <li class="menu__item">
+              <li className="menu__item">
                 <NavLink
-                  to="/"
+                  to="/teachers"
                   className="menu__link menu__link-header menu__link-second"
                 >
                   Teachers
                 </NavLink>
               </li>
-              <li class="menu__item">
+              <li className="menu__item">
                 <NavLink
                   to="/about"
                   className="menu__link menu__link-header menu__link-fourth"
@@ -39,9 +39,11 @@ const Header = () => {
                   About us
                 </NavLink>
               </li>
-              <li class="menu__item">
-                <Button className="btn header__button" text="Apply" />
-              </li>
+              <NavLink to="/apply">
+                <li className="menu__item">
+                  <Button className="btn header__button" text="Apply" />
+                </li>
+              </NavLink>
             </ul>
           </nav>
         </div>

@@ -23,7 +23,7 @@ const Info = () => {
                 <li className="info__list-item">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </li>
-                <li class="info__list-item">
+                <li className="info__list-item">
                   Vestibulum commodo id amet non facilisis in.
                 </li>
                 <li className="info__list-item">

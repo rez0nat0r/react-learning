@@ -1,0 +1,51 @@
+@import '../../styles/variables/variables.scss';
+
+.apply {
+    display: flex;
+    justify-content: center;
+    &__form {
+        width: 532px;
+        margin: 0 180px 0 0;
+    }
+    &__form-title {
+        font-family: 'Baloo2-Bold', sans-serif;
+        font-size: 30px;
+        line-height: 36px;
+        margin: 0 0 12px 0;
+    }
+    &__form-text {
+        font-family: 'Poppins-Regular', sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    &__form-content {
+        display: flex;
+        align-items: center;
+    }
+    &__form-content-text {
+        font-family: 'Poppins-Medium', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        width: 144px;
+        color: $apply-color;
+    }
+    &__form-content-input {
+        width: 300px;
+        height: 40px;
+        font-family: 'Poppins-Regular', sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: $apply-input;
+    }
+    &__img {
+        width: 457px;
+        height: 488px;
+    }
+    &__form-btn {
+        width: 152px;
+        height: 40px;
+        margin: 56px 0 120px 0;
+    }
+}
